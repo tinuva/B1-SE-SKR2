@@ -61,7 +61,7 @@
 #include "Menu/FeatureSettings.h"
 #include "Menu/leveling.h"
 #include "Menu/ProbeOffset.h"
-#include "Menu/movement.h"
+#include "Menu/Movement.h"
 #include "Menu/SendGcode.h"
 #include "Menu/Selectmode.h"
 #include "Menu/MarlinMode.h"
