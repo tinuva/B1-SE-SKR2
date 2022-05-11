@@ -93,7 +93,7 @@ void LCD_Setup() {
   #endif
   memcpy(&lastSettings, &infoSettings, sizeof(SETTINGS));
   memcpy(lastTSC_Para, TSC_Para, sizeof(TSC_Para));
-  SD_SUPPORT=0;
+  SD_SUPPORT=1;
 }
 
 static bool hasPrintingMenu = false;

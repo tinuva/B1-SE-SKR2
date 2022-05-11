@@ -150,7 +150,7 @@ void menuCallBackGocdeList(void)
       curPage = 0;
       if(filelist.isAtRootDir())
       {
-        SD_SUPPORT=0;
+        SD_SUPPORT=1;
         infoMenu.cur--;
         break;
       }
@@ -332,7 +332,7 @@ void menuCallBackGocdeIcon(void)
       Icon_curPage = 0;
       if(filelist.isAtRootDir())
       {
-        SD_SUPPORT=0;
+        SD_SUPPORT=1;
         infoMenu.cur--;
         break;
       }

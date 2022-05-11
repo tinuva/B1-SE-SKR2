@@ -553,7 +553,7 @@ void TSCBoot::scanUpdates(void) {
   if((result&FONT)&&(result & BMP))
   {
     GUI_Clear(BK_COLOR);
-    GUI_DispString(100, 5, (uint8_t*)"update TFT35, Erasing spiflsh...!");
+    GUI_DispString(100, 5, (uint8_t*)"update TFT35, Erasing spi flash...!");
     W25Qxx_EraseBulk();
   }
   if (result & FONT) {

@@ -1365,11 +1365,7 @@
 #ifdef BTT_H2_EXTRUDERS
   #define Y_MIN_POS -20
 #else
-  #ifdef DUAL_E
-   #define Y_MIN_POS -20
-  #else
-   #define Y_MIN_POS 0
-  #endif
+  #define Y_MIN_POS 0
 #endif
 #define Z_MIN_POS 0
 #define X_MAX_POS X_BED_SIZE
@@ -1422,7 +1418,11 @@
 #if ENABLED(FILAMENT_RUNOUT_SENSOR)
   #define FIL_RUNOUT_ENABLED_DEFAULT true // Enable the sensor on startup. Override with M412 followed by M500.
                                           // Note that this default setting will be used in BTT_UI, and valid in factory settings
-  #define NUM_RUNOUT_SENSORS   1          // Number of sensors, up to one per extruder. Define a FIL_RUNOUT#_PIN for each.
+  #ifdef DUAL_E
+    #define NUM_RUNOUT_SENSORS   2          // Number of sensors, up to one per extruder. Define a FIL_RUNOUT#_PIN for each.
+  #else
+    #define NUM_RUNOUT_SENSORS   1
+  #endif
 
   #define FIL_RUNOUT_STATE     HIGH        // Pin state indicating that filament is NOT present.
   #define FIL_RUNOUT_PULLUP               // Use internal pullup for filament runout pins.
@@ -1733,7 +1733,7 @@
 #endif
 
 // Homing speeds (mm/min)
-#define HOMING_FEEDRATE_MM_M { (50*60), (50*60), (2*60) }
+#define HOMING_FEEDRATE_MM_M { (50*60), (50*60), (6*60) }
 
 // Validate that endstops are triggered on homing moves
 #define VALIDATE_HOMING_ENDSTOPS

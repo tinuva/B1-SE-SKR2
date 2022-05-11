@@ -614,7 +614,7 @@
   #include "stm32f4/pins_FYSETC_CHEETAH_V20.h"  // STM32F4                                env:FYSETC_CHEETAH_V20
 
 #elif MB(BTT_SKR_2)
-  #include "stm32f4/pins_BTT_SKR_2.h"           // STM32F4                                env:BIGTREE_SKR_2
+  #include "stm32f4/pins_BTT_SKR_2.h"           // STM32F4                                env:BIGTREE_SKR_2 env:BIGTREE_SKR_2_F429_usb_flash_drive
 
 //
 // ARM Cortex M7
